@@ -1,0 +1,14 @@
+if __name__ == '__main__':
+    n = int(input())
+    
+    # Method 1
+    print(*range(1,n+1),sep='')
+    
+    # Method 2
+    
+    toprint = ""
+    for i in range(n):
+        
+        toprint = toprint + str(i + 1)
+        
+    print(toprint)
