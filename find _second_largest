@@ -1,0 +1,27 @@
+if __name__ == '__main__':
+    n = int(input())
+    arr = map(int, input().split())
+    arrList = list(arr)
+    largest = arrList[0]
+    for i in range(len(arrList)):
+        
+        if i < len(arrList) - 1:
+            if arrList[i + 1] > largest:
+                largest = arrList[i + 1]
+           
+    arrList_cp = arrList.copy()
+    arrList_cp = list(filter(lambda a: a != largest, arrList_cp))    
+    #print(arrList_cp)
+    secLargest = arrList_cp[0]   
+    
+    for i in range(len(arrList_cp)):
+        
+        # if i < len(arrList_cp) - 1:
+        #     if arrList_cp[i + 1] > secLargest & arrList_cp[i + 1] != largest:
+        #         secLargest = arrList_cp[i + 1]
+        
+        if i < len(arrList_cp) - 1:
+            if arrList_cp[i + 1] > secLargest:
+                secLargest = arrList_cp[i + 1]
+    
+    print(secLargest)
